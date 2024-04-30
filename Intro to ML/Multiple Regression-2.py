@@ -15,6 +15,6 @@ y = dataframe['Value3']
 linearregression = linear_model.LinearRegression()
 linearregression.fit(X.values, y.values)
 
-predictedvalue= linearregression.predict([[10, 100]])
+predictedvalue= linearregression.predict([[100, 1000]])
 
 print(predictedvalue)

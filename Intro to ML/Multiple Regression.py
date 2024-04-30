@@ -21,3 +21,4 @@ linearregression.fit(X.values, y.values)
 predictedpercentage= linearregression.predict([[23, 3]])
 
 print(predictedpercentage)
+

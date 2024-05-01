@@ -16,7 +16,9 @@ test_y = y[80:]
 mymodel = numpy.poly1d(numpy.polyfit(train_x, train_y, 4))
 
 r2 = r2_score(train_y, mymodel(train_x))
+print(r2)
 
+r2 = r2_score(test_y, mymodel(test_x))
 print(r2)
 
 myline = numpy.linspace(-10, 20, 100)

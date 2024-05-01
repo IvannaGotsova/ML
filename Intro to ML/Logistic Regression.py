@@ -21,3 +21,8 @@ print(predictedOne)
 
 predictedOne = logr.predict(numpy.array([61]).reshape(-1,1))
 print(predictedOne)
+
+logisticRegressionCoef = logr.coef_
+coeff = numpy.exp(logisticRegressionCoef)
+
+print(coeff)

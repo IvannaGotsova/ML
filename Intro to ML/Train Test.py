@@ -21,6 +21,8 @@ print(r2)
 r2 = r2_score(test_y, mymodel(test_x))
 print(r2)
 
+print(mymodel(35))
+
 myline = numpy.linspace(-10, 20, 100)
 
 plt.scatter(train_x, train_y)

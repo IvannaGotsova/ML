@@ -1,5 +1,7 @@
 import numpy
 import matplotlib.pyplot as plt
+from sklearn.metrics import r2_score
+
 numpy.random.seed(2)
 
 x = numpy.random.normal(5, 5, 500)
@@ -12,6 +14,10 @@ test_x = x[80:]
 test_y = y[80:]
 
 mymodel = numpy.poly1d(numpy.polyfit(train_x, train_y, 4))
+
+r2 = r2_score(train_y, mymodel(train_x))
+
+print(r2)
 
 myline = numpy.linspace(-10, 20, 100)
 

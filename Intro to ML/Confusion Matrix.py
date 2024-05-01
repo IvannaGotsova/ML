@@ -11,3 +11,16 @@ confusionMatrixDisplay = metrics.ConfusionMatrixDisplay(confusion_matrix = confu
 
 confusionMatrixDisplay.plot()
 plt.show()
+
+accuracy = metrics.accuracy_score(actualValues, predictedValues)
+precision = metrics.precision_score(actualValues, predictedValues)
+sensitivityRecall = metrics.recall_score(actualValues, predictedValues)
+specificity = metrics.recall_score(actualValues, predictedValues, pos_label=0)
+f1Score = metrics.f1_score(actualValues, predictedValues)
+
+print(accuracy)
+print(precision)
+print(sensitivityRecall)
+print(specificity)
+print(f1Score)
+

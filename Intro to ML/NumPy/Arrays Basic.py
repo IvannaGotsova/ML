@@ -26,3 +26,5 @@ print(arrayExample[0:5])
 print(arrayExample[:5])
 print(arrayExample[5:])
 print(arrayExample[::2])
+
+

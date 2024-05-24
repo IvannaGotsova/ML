@@ -10,7 +10,7 @@ datasetExample = {
 }
 
 dataframeExample = pd.DataFrame(datasetExample, index = ["First", "Second", "Third", "Fourth", "Fifth", "Sixth"])
-dataframeExample = dataframeExample[['age', 'grades']]
+dataframeExample = dataframeExample[['age', 'salary', 'grades']]
 
 print(dataframeExample)
 print()

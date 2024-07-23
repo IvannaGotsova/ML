@@ -1,8 +1,9 @@
 import pandas as pd
 import numpy as np
-from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import GaussianNB
+from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
+from webencodings import labels
 
 datasetExample = {
   'First Name': ["Ivan", "Petar", "Dimitar", "Stoqn", "Philip", "Stephan"],
@@ -37,3 +38,8 @@ y_prediction = gaussianNaiveBayesClassifier.predict(X_test)
 
 accuracy = np.sum(y_prediction == y_test) / len(y_test)
 print("Accuracy:", accuracy)
+
+confusionMatrix = confusion_matrix(y_test, y_prediction)
+
+print(confusionMatrix)
+

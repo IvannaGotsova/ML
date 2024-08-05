@@ -29,3 +29,16 @@ dataframeExampleFiltered_numeric=dataframeExampleFiltered.drop(['Outlook', 'Temp
 dataframeExamplePromotion = ["No", "Yes", "No", "No", "Yes", "Yes", "Yes", "No", "Yes", "No"]
 
 print(dataframeExampleFiltered_numeric)
+
+X_train, X_test, y_train, y_test = train_test_split(dataframeExampleFiltered_numeric, dataframeExamplePromotion, test_size=0.50,
+                                                    random_state=0)
+
+gaussianNaiveBayesClassifier = GaussianNB()
+
+gaussianNaiveBayesClassifier.fit(X_train, y_train)
+
+y_prediction = gaussianNaiveBayesClassifier.predict(X_test)
+
+accuracy = np.sum(y_prediction == y_test) / len(y_test)
+print("Accuracy:", accuracy)
+

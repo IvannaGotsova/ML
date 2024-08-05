@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import GaussianNB
-from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
+from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay, f1_score
 from sklearn.preprocessing import LabelEncoder
 from webencodings import labels
 from sklearn.metrics import classification_report
@@ -42,6 +42,9 @@ y_prediction = gaussianNaiveBayesClassifier.predict(X_test)
 
 accuracy = np.sum(y_prediction == y_test) / len(y_test)
 print("Accuracy:", accuracy)
+f1 = f1_score(y_prediction, y_test, average="weighted")
+print("F1 Score:", f1)
+
+print(classification_report(y_test, y_prediction))
 
 
-print(classification_report(y_test,y_prediction))

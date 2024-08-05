@@ -5,6 +5,7 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 from sklearn.preprocessing import LabelEncoder
 from webencodings import labels
+from sklearn.metrics import classification_report
 
 datasetExampleFiltered = {
     'Day': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
@@ -42,3 +43,5 @@ y_prediction = gaussianNaiveBayesClassifier.predict(X_test)
 accuracy = np.sum(y_prediction == y_test) / len(y_test)
 print("Accuracy:", accuracy)
 
+
+print(classification_report(y_test,y_prediction))

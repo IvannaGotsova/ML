@@ -43,6 +43,3 @@ confusionMatrix = confusion_matrix(y_test, y_prediction)
 
 print(confusionMatrix)
 
-disp = ConfusionMatrixDisplay(confusion_matrix=confusionMatrix, display_labels=labels)
-disp.plot()
-

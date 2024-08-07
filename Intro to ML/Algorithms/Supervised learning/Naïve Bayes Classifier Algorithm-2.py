@@ -4,8 +4,9 @@ from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import GaussianNB
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay, f1_score
 from sklearn.preprocessing import LabelEncoder
-from webencodings import labels
 from sklearn.metrics import classification_report
+from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
+from webencodings import labels
 
 datasetExampleFiltered = {
     'Day': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
@@ -46,5 +47,11 @@ f1 = f1_score(y_prediction, y_test, average="weighted")
 print("F1 Score:", f1)
 
 print(classification_report(y_test, y_prediction))
+
+
+confusionMatrix = confusion_matrix(y_test, y_prediction)
+
+print(confusionMatrix)
+
 
 

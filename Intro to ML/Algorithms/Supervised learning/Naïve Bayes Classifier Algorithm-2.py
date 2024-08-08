@@ -5,8 +5,7 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay, f1_score
 from sklearn.preprocessing import LabelEncoder
 from sklearn.metrics import classification_report
-from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
-from webencodings import labels
+
 
 datasetExampleFiltered = {
     'Day': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
@@ -53,5 +52,10 @@ confusionMatrix = confusion_matrix(y_test, y_prediction)
 
 print(confusionMatrix)
 
+labels = ["label1", "label2"]
+
+disp = ConfusionMatrixDisplay(confusion_matrix=confusionMatrix, display_labels=labels)
+disp.plot()
+disp.show()
 
 

@@ -3,7 +3,7 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import GaussianNB
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
-from webencodings import labels
+
 
 datasetExample = {
   'First Name': ["Ivan", "Petar", "Dimitar", "Stoqn", "Philip", "Stephan"],
@@ -43,3 +43,8 @@ confusionMatrix = confusion_matrix(y_test, y_prediction)
 
 print(confusionMatrix)
 
+labels = ["label1", "label2"]
+
+disp = ConfusionMatrixDisplay(confusion_matrix=confusionMatrix, display_labels=labels)
+disp.plot()
+disp.show()

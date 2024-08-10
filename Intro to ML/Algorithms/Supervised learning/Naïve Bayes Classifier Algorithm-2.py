@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import GaussianNB
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay, f1_score
@@ -58,4 +59,4 @@ disp = ConfusionMatrixDisplay(confusion_matrix=confusionMatrix, display_labels=l
 disp.plot()
 disp.show()
 
-
+plt.show()

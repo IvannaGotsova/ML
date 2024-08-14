@@ -68,3 +68,6 @@ dataframeExampleConcatColumn.drop(columns=['New'], inplace=True)
 dataframeExampleConcatColumn.drop(index=[6], inplace=True)
 print(dataframeExampleConcatColumn)
 
+print(dataframeExample.tail(3))
+print(dataframeExample.head(3))
+print(dataframeExample.sample(frac=0.25))

@@ -73,3 +73,14 @@ print(dataframeExample.head(3))
 print(dataframeExample.sample(frac=0.25))
 
 print(dataframeExample[['First Name', 'Last Name', 'City']])
+
+print(dataframeExample.query('City == "Sofia"'))
+
+dataframeExample.rename(columns={'First Name': 'First_Name'}, inplace=True)
+dataframeExample.rename(columns={'Last Name': 'Last_Name'}, inplace=True)
+
+print(dataframeExample)
+print()
+
+
+print(dataframeExample.query('First_Name == "Ivan" and City == "Sofia"'))

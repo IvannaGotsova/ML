@@ -71,3 +71,6 @@ print(dataframeExampleConcatColumn)
 print(dataframeExample.tail(3))
 print(dataframeExample.head(3))
 print(dataframeExample.sample(frac=0.25))
+
+
+print(dataframeExample[['First Name', 'Last Name', 'City']])

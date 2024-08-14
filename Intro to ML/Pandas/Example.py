@@ -84,3 +84,4 @@ print()
 
 
 print(dataframeExample.query('First_Name == "Ivan" and City == "Sofia"'))
+print(dataframeExample.query('Age > 40 and Salary <= 1000'))

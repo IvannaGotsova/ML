@@ -57,3 +57,9 @@ dataframeExample.rename(columns={'Grades': 'Grade'}, inplace=True)
 
 print(dataframeExample)
 print()
+
+dataframeExample.reset_index(inplace=True)
+
+print(dataframeExample)
+print()
+

@@ -36,3 +36,16 @@ dataframeExampleRow = pd.DataFrame(datasetExampleConcatRow)
 dataframeExampleConcatRow = pd.concat([dataframeExample, dataframeExampleRow])
 
 print(dataframeExampleConcatRow)
+print()
+
+datasetExampleConcatColumn = {
+  'New': ["No", "No", "No", "No", "No", "No", "Yes"],
+}
+
+dataframeExampleColumn = pd.DataFrame(datasetExampleConcatColumn)
+
+dataframeExampleConcatColumn = pd.concat([dataframeExample, dataframeExampleColumn], axis=1)
+
+print(dataframeExampleConcatColumn)
+print()
+

@@ -14,3 +14,9 @@ datasetExample = {
 dataframeExample = pd.DataFrame(datasetExample)
 
 print(dataframeExample)
+print()
+
+dataColumnsToRows = pd.melt(dataframeExample)
+
+print(dataColumnsToRows)
+print()

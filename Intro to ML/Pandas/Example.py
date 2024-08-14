@@ -63,3 +63,8 @@ dataframeExample.sort_index(inplace=True)
 print(dataframeExample)
 print()
 
+
+dataframeExampleConcatColumn.drop(columns=['New'], inplace=True)
+dataframeExampleConcatColumn.drop(index=[6], inplace=True)
+print(dataframeExampleConcatColumn)
+

@@ -20,3 +20,19 @@ dataColumnsToRows = pd.melt(dataframeExample)
 
 print(dataColumnsToRows)
 print()
+
+datasetExampleConcatRow = {
+  'First Name': ["New"],
+  'Last Name': ["New"],
+  'Age': [0],
+  'City': ["New"],
+  'Salary': [0],
+  'Experience': [0],
+  'Grades': [0]
+}
+
+dataframeExampleRow = pd.DataFrame(datasetExampleConcatRow)
+
+dataframeExampleConcatRow = pd.concat([dataframeExample, dataframeExampleRow])
+
+print(dataframeExampleConcatRow)

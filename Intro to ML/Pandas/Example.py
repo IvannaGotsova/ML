@@ -49,3 +49,8 @@ dataframeExampleConcatColumn = pd.concat([dataframeExample, dataframeExampleColu
 print(dataframeExampleConcatColumn)
 print()
 
+dataframeExample.sort_values('First Name', ascending=False, inplace=True)
+
+print(dataframeExample)
+print()
+

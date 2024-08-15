@@ -63,8 +63,9 @@ print()
 print(dataframeExampleFiltered.corr())
 print()
 
-dataframeExample = pd.DataFrame(dataframeExample, index=[1, 2, 3, 4, 5, 6])
-print(dataframeExample)
+dataframeExampleNamed = pd.DataFrame(datasetExample, index=[1, 2, 3, 4, 5, 6])
+print(dataframeExampleNamed)
 print()
 
 print(dataframeExample.loc[3])
+

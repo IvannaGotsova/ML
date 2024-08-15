@@ -65,3 +65,6 @@ print()
 
 dataframeExample = pd.DataFrame(dataframeExample, index=[1, 2, 3, 4, 5, 6])
 print(dataframeExample)
+print()
+
+print(dataframeExample.loc[3])

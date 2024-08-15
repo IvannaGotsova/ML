@@ -13,7 +13,6 @@ datasetExample = {
 
 dataframeExample = pd.DataFrame(datasetExample)
 
-
 print(dataframeExample['First Name'].value_counts())
 print()
 print(len(dataframeExample))
@@ -63,3 +62,6 @@ print()
 
 print(dataframeExampleFiltered.corr())
 print()
+
+dataframeExample = pd.DataFrame(dataframeExample, index=[1, 2, 3, 4, 5, 6])
+print(dataframeExample)

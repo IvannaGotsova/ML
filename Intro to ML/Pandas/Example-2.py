@@ -48,10 +48,14 @@ datasetExampleNew = {
     'Salary': [1000, 1100, 1000, 1000, 1100, 1000],
     'Experience': [10, 15, 17, 14, 11, 5],
     'Grades': [4, 5, 6, 5, 4, 4],
-    'Result': ['Yes', 'Yes','Yes','Yes','Yes','Yes'],
+    'Result': ['Yes', 'Yes', 'Yes', 'Yes', 'Yes', 'Yes'],
 }
 
 dataframeExampleNew = pd.DataFrame(datasetExampleNew)
 
 dataframeExampleMerge = pd.merge(dataframeExample, dataframeExampleNew)
 print(dataframeExampleMerge)
+print()
+dataframeExampleFiltered = dataframeExample[['Age', 'Salary', 'Experience', 'Grades']]
+print(dataframeExampleFiltered)
+print()

@@ -56,6 +56,10 @@ dataframeExampleNew = pd.DataFrame(datasetExampleNew)
 dataframeExampleMerge = pd.merge(dataframeExample, dataframeExampleNew)
 print(dataframeExampleMerge)
 print()
+
 dataframeExampleFiltered = dataframeExample[['Age', 'Salary', 'Experience', 'Grades']]
 print(dataframeExampleFiltered)
+print()
+
+print(dataframeExampleFiltered.corr())
 print()

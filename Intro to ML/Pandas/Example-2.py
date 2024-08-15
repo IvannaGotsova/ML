@@ -14,3 +14,8 @@ dataframeExample = pd.DataFrame(datasetExample)
 
 
 print(dataframeExample['First Name'].value_counts())
+print()
+print(len(dataframeExample))
+print()
+print(dataframeExample.shape)
+print()

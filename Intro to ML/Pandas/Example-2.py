@@ -1,4 +1,5 @@
 import pandas as pd
+import matplotlib.pyplot as plt
 
 datasetExample = {
     'First Name': ["Ivan", "Petar", "Dimitar", "Stoqn", "Philip", "Stephan"],
@@ -35,3 +36,5 @@ print(dataframeExample['Age'].var())
 print()
 print(dataframeExample['Age'].std())
 print()
+dataframeExample.plot.scatter(x="Age", y="City")
+plt.show()

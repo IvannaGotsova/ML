@@ -38,4 +38,20 @@ print(dataframeExample['Age'].std())
 print()
 dataframeExample.plot.scatter(x="Age", y="City")
 dataframeExample.plot.scatter(x="Age", y="Salary")
-plt.show()
+" plt.show() "
+
+datasetExampleNew = {
+    'First Name': ["Ivan", "Petar", "Dimitar", "Stoqn", "Philip", "Stephan"],
+    'Last Name': ["Ivanov", "Petrov", "Dimitrov", "Stoqnov", "Philipov", "Stephanov"],
+    'Age': [39, 43, 47, 42, 39, 36],
+    'City': ["Sofia", "Sofia", "Plovdiv", "Sofia", "Sofia", "Varna"],
+    'Salary': [1000, 1100, 1000, 1000, 1100, 1000],
+    'Experience': [10, 15, 17, 14, 11, 5],
+    'Grades': [4, 5, 6, 5, 4, 4],
+    'Result': ['Yes', 'Yes','Yes','Yes','Yes','Yes'],
+}
+
+dataframeExampleNew = pd.DataFrame(datasetExampleNew)
+
+dataframeExampleMerge = pd.merge(dataframeExample, dataframeExampleNew)
+print(dataframeExampleMerge)

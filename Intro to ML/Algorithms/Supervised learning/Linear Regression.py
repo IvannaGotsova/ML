@@ -12,8 +12,9 @@ Salary = [ 1064, 1067, 1079, 1081, 1110, 1116, 1178, 1208, 1269, 1276, 1303, 135
 plt.scatter(Age, Salary)
 plt.xlabel("Age")
 plt.ylabel("Salary")
+plt.title("Age / Salary")
 plt.plot(Age, Salary, color = "b")
-#plt.show()
+plt.show()
 
 
 X_train, X_test,\
@@ -24,5 +25,4 @@ X_train, X_test,\
 
 linear_model = linear_model.LinearRegression()
 linear_model.fit(X_train, y_train)
-
 

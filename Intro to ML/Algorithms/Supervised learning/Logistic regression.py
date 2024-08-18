@@ -36,3 +36,4 @@ print(predicted)
 
 
 print(logistic_regression.coef_)
+print(logistic_regression.intercept_)

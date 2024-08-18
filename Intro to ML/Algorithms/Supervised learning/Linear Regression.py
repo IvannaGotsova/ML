@@ -39,3 +39,6 @@ print(f"coefficient of determination: {coef_determination}")
 
 intercept = linear_model.intercept_
 print(f"intercept: {intercept}")
+
+slope = linear_model.coef_
+print(f"slope: {slope}")

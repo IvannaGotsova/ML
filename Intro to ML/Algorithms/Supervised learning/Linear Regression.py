@@ -10,6 +10,7 @@ Salary = [ 1064, 1067, 1079, 1081, 1110, 1116, 1178, 1208, 1269, 1276, 1303, 135
 plt.scatter(Age, Salary)
 plt.xlabel("Age")
 plt.ylabel("Salary")
+plt.plot(Age, Salary, color = "b")
 plt.show()
 
 

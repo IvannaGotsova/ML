@@ -36,3 +36,6 @@ print(y_test)
 
 coef_determination = linear_model.score(Age, Salary)
 print(f"coefficient of determination: {coef_determination}")
+
+intercept = linear_model.intercept_
+print(f"intercept: {intercept}")

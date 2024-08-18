@@ -19,3 +19,17 @@ plt.plot(Age, Output, color="b")
 logistic_regression = linear_model.LogisticRegression()
 logistic_regression.fit(Age, Output)
 
+predicted = logistic_regression.predict(np.array([46]).reshape(-1,1))
+print(predicted)
+
+predicted = logistic_regression.predict(np.array([36]).reshape(-1,1))
+print(predicted)
+
+predicted = logistic_regression.predict(np.array([45]).reshape(-1,1))
+print(predicted)
+
+predicted = logistic_regression.predict(np.array([68]).reshape(-1,1))
+print(predicted)
+
+predicted = logistic_regression.predict(np.array([30]).reshape(-1,1))
+print(predicted)

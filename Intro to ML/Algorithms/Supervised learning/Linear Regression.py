@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy import stats
+from sklearn import linear_model
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 
@@ -21,4 +22,5 @@ X_train, X_test,\
                     random_state=1)
 
 
-
+linear_model = linear_model.LinearRegression()
+linear_model.fit(X_train, y_train)

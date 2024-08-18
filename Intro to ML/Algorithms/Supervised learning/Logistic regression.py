@@ -33,3 +33,6 @@ print(predicted)
 
 predicted = logistic_regression.predict(np.array([30]).reshape(-1,1))
 print(predicted)
+
+
+print(logistic_regression.coef_)

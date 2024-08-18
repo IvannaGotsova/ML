@@ -12,3 +12,7 @@ plt.ylabel("Salary")
 plt.title("Age / Salary")
 plt.plot(Age, Salary, color = "b")
 plt.show()
+
+
+logistic_regression = linear_model.LogisticRegression()
+logistic_regression.fit(Age, Salary)

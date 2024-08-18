@@ -33,3 +33,6 @@ linear_model.fit(X_train, y_train)
 y_prediction = linear_model.predict(X_test)
 print(y_prediction)
 print(y_test)
+
+coef_determination = linear_model.score(Age, Salary)
+print(f"coefficient of determination: {coef_determination}")

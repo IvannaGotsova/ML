@@ -34,8 +34,9 @@ print(predicted)
 predicted = logistic_regression.predict(np.array([30]).reshape(-1,1))
 print(predicted)
 
+print()
+print(f"Slope is {logistic_regression.coef_}")
+print(f"Intercept is {logistic_regression.intercept_}")
+print(f"Coefficient of determination is {logistic_regression.score(Age, Output)}")
 
-print(logistic_regression.coef_)
-print(logistic_regression.intercept_)
-print(logistic_regression.score(Age, Output))
 

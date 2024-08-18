@@ -30,7 +30,6 @@ X_train, X_test, y_train, y_test = train_test_split(Age, Salary,
 linear_model = linear_model.LinearRegression()
 linear_model.fit(X_train, y_train)
 
-
-
-#y_prediction = linear_model.predict(X_test)
-#print(y_prediction)
+y_prediction = linear_model.predict(X_test)
+print(y_prediction)
+print(y_test)

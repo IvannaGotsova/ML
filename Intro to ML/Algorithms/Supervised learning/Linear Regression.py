@@ -4,34 +4,14 @@ import matplotlib.pyplot as plt
 from scipy import stats
 from sklearn.linear_model import LinearRegression
 
-datasetExample = {
-    'First Name': ["Ivan", "Petar", "Dimitar", "Stoqn", "Philip", "Stephan"],
-    'Last Name': ["Ivanov", "Petrov", "Dimitrov", "Stoqnov", "Philipov", "Stephanov"],
-    'Age': [39, 43, 47, 42, 39, 36],
-    'City': ["Sofia", "Sofia", "Plovdiv", "Sofia", "Sofia", "Varna"],
-    'Salary': [1000, 1100, 1000, 1000, 1100, 1000],
-    'Experience': [10, 15, 17, 14, 11, 5],
-    'Grades': [4, 5, 6, 5, 4, 4]
-}
+Age = [39, 40, 41, 48, 49, 50, 51, 52, 54, 55, 36, 37, 42, 43, 44, 45, 47, 50, 53, 54, 35, 36, 37, 38, 40, 41, 42, 46, 47, 53, 35, 37, 38, 39, 42, 43, 44, 45, 46, 48, 37, 42, 43, 44, 46, 47, 49, 50, 53, 54]
+Salary = [ 1064, 1067, 1079, 1081, 1110, 1116, 1178, 1208, 1269, 1276, 1303, 1354, 1437, 1472, 1489, 1495, 1515, 1529, 1571, 1580, 1603, 1626, 1638, 1664, 1694, 1699, 1723, 1766, 1768, 1771, 1781, 1783, 1784, 1804, 1834, 1840, 1874, 1895, 1901, 1905, 1913, 1947, 1953, 1955, 1957, 1960, 1961, 1975, 1989, 1995]
 
-dataframeExample = pd.DataFrame(datasetExample)
-
-dataframeExamplePromotion = ["No", "Yes", "Yes", "Yes", "No", "No"]
-
-print(dataframeExample)
-
-#plt.scatter(dataframeExample['Age'], dataframeExample['Salary'])
-#plt.scatter(dataframeExample['Grades'], dataframeExample['Experience'])
-#plt.show()
-
-
-plt.scatter(dataframeExample[['Age']], dataframeExample[['Grades']])
-plt.plot(dataframeExample[['Age']], dataframeExample[['Grades']], color = "b")
-plt.xlabel('Age')
-plt.ylabel('Grades')
+plt.scatter(Age, Salary)
+plt.xlabel("Age")
+plt.ylabel("Salary")
 plt.show()
 
 
-linearRegression = LinearRegression()
 
-linearRegression.fit(dataframeExample[['Age']], dataframeExample[['Salary']])
+

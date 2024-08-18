@@ -37,3 +37,5 @@ print(predicted)
 
 print(logistic_regression.coef_)
 print(logistic_regression.intercept_)
+print(logistic_regression.score(Age, Output))
+

@@ -18,7 +18,7 @@ plt.plot(Age, Salary, color = "b")
 
 
 X_train, X_test, y_train, y_test = train_test_split(Age, Salary,
-                    test_size=0.4,
+                    test_size=0.2,
                     random_state=1)
 
 #print(X_train)

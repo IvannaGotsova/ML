@@ -20,9 +20,14 @@ dataframeExamplePromotion = ["No", "Yes", "Yes", "Yes", "No", "No"]
 
 print(dataframeExample)
 
-plt.scatter(dataframeExample['Age'], dataframeExample['Salary'])
-plt.scatter(dataframeExample['Grades'], dataframeExample['Experience'])
+#plt.scatter(dataframeExample['Age'], dataframeExample['Salary'])
+#plt.scatter(dataframeExample['Grades'], dataframeExample['Experience'])
 #plt.show()
+
+
+plt.scatter(dataframeExample[['Age']], dataframeExample[['Grades']])
+plt.plot(dataframeExample[['Age']], dataframeExample[['Grades']], color = "b")
+plt.show()
 
 
 linearRegression = LinearRegression()

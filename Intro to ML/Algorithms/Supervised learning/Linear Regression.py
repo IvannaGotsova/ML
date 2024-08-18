@@ -27,6 +27,8 @@ print(dataframeExample)
 
 plt.scatter(dataframeExample[['Age']], dataframeExample[['Grades']])
 plt.plot(dataframeExample[['Age']], dataframeExample[['Grades']], color = "b")
+plt.xlabel('Age')
+plt.ylabel('Grades')
 plt.show()
 
 

@@ -19,7 +19,7 @@ dataframeExamplePromotion = ["No", "Yes", "Yes", "Yes", "No", "No"]
 print(dataframeExample)
 
 plt.scatter(dataframeExample['Age'], dataframeExample['Salary'])
-plt.scatter(dataframeExample['Age'], dataframeExample['Experience'])
+plt.scatter(dataframeExample['Grades'], dataframeExample['Experience'])
 
 plt.show()
 

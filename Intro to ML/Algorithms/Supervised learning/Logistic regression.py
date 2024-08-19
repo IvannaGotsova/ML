@@ -72,3 +72,5 @@ print(f"Precision is {precision}")
 recall = recall_score(y_test, y_prediction)
 print(f"Recall (Sensitivity) is  {recall}:")
 
+f1 = f1_score(y_test, y_prediction)
+print(f"F1-Score is {f1}")

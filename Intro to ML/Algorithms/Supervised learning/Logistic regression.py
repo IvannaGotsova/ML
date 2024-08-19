@@ -16,27 +16,11 @@ plt.title("Age / Salary")
 plt.plot(Age, Output, color="b")
 #plt.show()
 
-logistic_regression = linear_model.LogisticRegression()
-logistic_regression.fit(Age, Output)
 
-predicted = logistic_regression.predict(np.array([46]).reshape(-1,1))
-print(predicted)
-
-predicted = logistic_regression.predict(np.array([36]).reshape(-1,1))
-print(predicted)
-
-predicted = logistic_regression.predict(np.array([45]).reshape(-1,1))
-print(predicted)
-
-predicted = logistic_regression.predict(np.array([68]).reshape(-1,1))
-print(predicted)
-
-predicted = logistic_regression.predict(np.array([30]).reshape(-1,1))
-print(predicted)
-
-print()
 print(f"Slope is {logistic_regression.coef_}")
 print(f"Intercept is {logistic_regression.intercept_}")
 print(f"Coefficient of determination is {logistic_regression.score(Age, Output)}")
+
+
 
 

@@ -39,3 +39,7 @@ print(logistic_regression.predict(np.array([45]).reshape(-1, 1)))
 print(logistic_regression.predict(np.array([53]).reshape(-1, 1)))
 print(logistic_regression.predict(np.array([65]).reshape(-1, 1)))
 print()
+
+print(f"Slope is {logistic_regression.coef_}")
+print(f"Intercept is {logistic_regression.intercept_}")
+print(f"Coefficient of determination is {logistic_regression.score(Age, Output)}")

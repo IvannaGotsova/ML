@@ -14,7 +14,8 @@ plt.xlabel("Age")
 plt.ylabel("Salary")
 plt.title("Age / Salary")
 plt.plot(Age, Output, color="b")
-#plt.show()
+plt.legend(["Age - Salary"], loc="right")
+plt.show()
 
 X_train, X_test, y_train, y_test = train_test_split(Age, Output, test_size=0.2, random_state=42)
 
@@ -23,7 +24,6 @@ print(y_train)
 print(X_test)
 print(y_test)
 print()
-
 
 logistic_regression = linear_model.LogisticRegression()
 logistic_regression.fit(X_train, y_train)

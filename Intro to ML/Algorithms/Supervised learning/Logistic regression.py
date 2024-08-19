@@ -15,9 +15,17 @@ plt.ylabel("Salary")
 plt.title("Age / Salary")
 plt.plot(Age, Output, color="b")
 plt.legend(["Age - Salary"], loc="right")
-plt.show()
+#plt.show()
 
 X_train, X_test, y_train, y_test = train_test_split(Age, Output, test_size=0.2, random_state=42)
+
+plt.scatter(X_train, y_train)
+plt.xlabel("Train")
+plt.ylabel("Test")
+plt.title("Train / Test")
+plt.plot(X_train, y_train, color="b")
+plt.legend(["Train - Test"], loc="right")
+plt.show()
 
 print(X_train)
 print(y_train)

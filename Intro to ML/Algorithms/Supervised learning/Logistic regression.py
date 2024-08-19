@@ -25,4 +25,7 @@ print(y_test)
 print()
 
 
+logistic_regression = linear_model.LogisticRegression()
+logistic_regression.fit(X_train, y_train)
+
 

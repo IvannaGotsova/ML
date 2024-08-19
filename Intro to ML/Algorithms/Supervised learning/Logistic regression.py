@@ -61,3 +61,8 @@ print()
 print(f"Slope is {logistic_regression.coef_}")
 print(f"Intercept is {logistic_regression.intercept_}")
 print(f"Coefficient of determination is {logistic_regression.score(Age, Output)}")
+print()
+
+accuracy = accuracy_score(y_test, y_prediction)
+print(f"Accuracy is {accuracy}")
+

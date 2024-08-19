@@ -9,7 +9,7 @@ Age = np.array([39, 40, 41, 48, 49, 50, 51, 52, 54, 55, 36, 37, 42, 43, 44, 45, 
 Output = np.array([0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0,
                    0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1])
 
-plt.scatter(Age, Output)
+#plt.scatter(Age, Output)
 plt.xlabel("Age")
 plt.ylabel("Salary")
 plt.title("Age / Salary")
@@ -19,14 +19,21 @@ plt.legend(["Age - Salary"], loc="right")
 
 X_train, X_test, y_train, y_test = train_test_split(Age, Output, test_size=0.2, random_state=42)
 
-plt.scatter(X_train, y_train)
+#plt.scatter(X_train, y_train)
 plt.xlabel("Train X")
 plt.ylabel("Train Y")
 plt.title("Train")
 plt.plot(X_train, y_train, color="b")
 plt.legend(["Train"], loc="right")
-plt.show()
+#plt.show()
 
+plt.scatter(X_test, y_test)
+plt.xlabel("Test")
+plt.ylabel("Test")
+plt.title("Test")
+plt.plot(X_test, y_test, color="b")
+plt.legend(["Test"], loc="right")
+plt.show()
 
 print(X_train)
 print(y_train)

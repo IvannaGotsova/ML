@@ -16,11 +16,3 @@ plt.title("Age / Salary")
 plt.plot(Age, Output, color="b")
 #plt.show()
 
-
-print(f"Slope is {logistic_regression.coef_}")
-print(f"Intercept is {logistic_regression.intercept_}")
-print(f"Coefficient of determination is {logistic_regression.score(Age, Output)}")
-
-
-
-

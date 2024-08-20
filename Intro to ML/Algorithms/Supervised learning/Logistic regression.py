@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from sklearn import linear_model
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
-
+from sklearn import metrics
 
 Age = np.array([39, 40, 41, 48, 49, 50, 51, 52, 54, 55, 36, 37, 42, 43, 44, 45, 47, 50, 53, 54, 35, 36, 37, 38, 40, 41,
                 42, 46, 47, 53, 35, 37, 38, 39, 42, 43, 44, 45, 46, 48, 37, 42, 43, 44, 46, 47, 49, 50, 53,
@@ -11,23 +11,23 @@ Age = np.array([39, 40, 41, 48, 49, 50, 51, 52, 54, 55, 36, 37, 42, 43, 44, 45, 
 Output = np.array([0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0,
                    0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1])
 
-#plt.scatter(Age, Output)
+# plt.scatter(Age, Output)
 plt.xlabel("Age")
 plt.ylabel("Salary")
 plt.title("Age / Salary")
 plt.plot(Age, Output, color="b")
 plt.legend(["Age - Salary"], loc="right")
-#plt.show()
+# plt.show()
 
 X_train, X_test, y_train, y_test = train_test_split(Age, Output, test_size=0.2, random_state=42)
 
-#plt.scatter(X_train, y_train)
+# plt.scatter(X_train, y_train)
 plt.xlabel("Train X")
 plt.ylabel("Train Y")
 plt.title("Train")
 plt.plot(X_train, y_train, color="b")
 plt.legend(["Train"], loc="right")
-#plt.show()
+# plt.show()
 
 plt.scatter(X_test, y_test)
 plt.xlabel("Test")
@@ -35,7 +35,7 @@ plt.ylabel("Test")
 plt.title("Test")
 plt.plot(X_test, y_test, color="b")
 plt.legend(["Test"], loc="right")
-plt.show()
+# plt.show()
 
 print(X_train)
 print(y_train)
@@ -74,3 +74,9 @@ print(f"Recall (Sensitivity) is  {recall}:")
 
 f1 = f1_score(y_test, y_prediction)
 print(f"F1-Score is {f1}")
+
+confusion_matrix = metrics.confusion_matrix(y_test, y_prediction)
+confusion_matrix_display = metrics.ConfusionMatrixDisplay(confusion_matrix=confusion_matrix, display_labels=[0, 1])
+
+confusion_matrix_display.plot()
+plt.show()

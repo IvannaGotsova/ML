@@ -44,3 +44,4 @@ print(f"slope: {slope}")
 x_prediction = np.array([64]).reshape((-1, 1))
 y_prediction = linear_model.predict(x_prediction)
 print(y_prediction)
+

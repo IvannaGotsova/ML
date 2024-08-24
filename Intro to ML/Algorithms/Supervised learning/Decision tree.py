@@ -37,3 +37,5 @@ decisionTree = decisionTree.fit(X, y)
 
 tree.plot_tree(decisionTree, feature_names=features)
 
+tree_representation = tree.export_text(decisionTree)
+print(tree_representation)

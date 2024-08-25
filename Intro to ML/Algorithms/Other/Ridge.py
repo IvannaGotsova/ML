@@ -40,11 +40,12 @@ print(f"The test score for linear regression model is {test_score_linear}")
 print()
 
 ridge_model = Ridge(alpha=10)
-ridge_model.fit(X_train,y_train)
+ridge_model.fit(X_train, y_train)
 
 train_score_ridge = ridge_model.score(X_train, y_train)
 test_score_ridge = ridge_model.score(X_test, y_test)
 
 print(f"The train score for ridge model is {train_score_ridge}")
 print(f"The test score for ridge model is {test_score_ridge}")
+print()
 

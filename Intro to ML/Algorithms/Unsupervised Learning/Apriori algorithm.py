@@ -1,4 +1,6 @@
-
+import numpy as np
+import pandas as pd
+from mlxtend.frequent_patterns import apriori, association_rules
 
 data = [
         ['I1',['G1', 'G2', 'G5', 'G3']],
@@ -23,5 +25,5 @@ data = [
         ['I20',['G1', 'G2', 'G3', 'G5']]
         ]
 
-print(data)
+
 

@@ -2,28 +2,17 @@ import numpy as np
 import pandas as pd
 from mlxtend.frequent_patterns import apriori, association_rules
 
-data = [
-        ['I1',['G1', 'G2', 'G5', 'G3']],
-        ['I2',['G2', 'G4', 'G2', 'G4', 'G2', 'G4']],
-        ['I3',['G2', 'G3', 'G2']],
-        ['I4',['G1', 'G2', 'G4', 'G1', 'G2', 'G5']],
-        ['I5',['G1', 'G3', 'G1', 'G2', 'G3', 'G5']],
-        ['I6',['G2', 'G3', 'G1', 'G2', 'G5', 'G3', 'G2']],
-        ['I7',['G1', 'G3', 'G3', 'G2']],
-        ['I8',['G1', 'G2', 'G3', 'G5']],
-        ['I9',['G1', 'G2', 'G3', 'G5']],
-        ['I10',['G1', 'G2', 'G5', 'G3', 'G3']],
-        ['I11',['G2', 'G4', 'G3', 'G3']],
-        ['I12',['G2', 'G3', 'G2', 'G5', 'G3', 'G2']],
-        ['I13',['G1', 'G2', 'G4']],
-        ['I14',['G1', 'G3', 'G1', 'G2', 'G5']],
-        ['I15',['G2', 'G3', 'G4', 'G2', 'G4']],
-        ['I16',['G1', 'G3', 'G4', 'G2', 'G4']],
-        ['I17',['G1', 'G2', 'G3', 'G5', 'G1', 'G2', 'G5']],
-        ['I18',['G1', 'G2', 'G3', 'G1', 'G2']],
-        ['IЯ9',['G1', 'G2', 'G3', 'G5']],
-        ['I20',['G1', 'G2', 'G3', 'G5']]
-        ]
+dataset = [
+["Ivan", "Plovdiv", "Mathematics", "22", "6", "91.2"],
+["Petar", "Sofia", "Biology","35", "5", "63.5"],
+["Dimitar", "Varna", "Mathematics","43", "5", "90.23"],
+["Stephan", "Burgas","Computer Science", "45", "4", "92.7"],
+["Philip", "Sofia", "Statistics","49", "6", "98.2"],
+["Robert", "Sofia", "Mathematics","23", "3", "88.1"],
+["Andrei", "Plovdiv", "Biology","34", "4", "95.0"]
+]
+
+dataframe = pd.DataFrame(dataset, columns=['Name', "City", 'Subject', 'Age', 'Grade', 'Percentage'])
 
 
 

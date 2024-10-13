@@ -23,3 +23,6 @@ data = [
     ['Я9', ['Bread', 'Milk', 'Salad', 'Vegetables']],
     ['20', ['Bread', 'Milk', 'Salad', 'Vegetables']]
 ]
+
+dataFrame = pd.DataFrame(data)
+

@@ -1,5 +1,4 @@
 import pandas as pd
-import numpy as np
 from mlxtend.frequent_patterns import apriori, association_rules
 from mlxtend.preprocessing import TransactionEncoder
 
@@ -26,3 +25,5 @@ data = [
     ['20', ['Bread', 'Milk', 'Salad', 'Vegetables']]
 ]
 
+data_to_used = [item[1] for item in data]
+print(data_to_used)

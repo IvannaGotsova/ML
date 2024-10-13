@@ -26,4 +26,11 @@ data = [
 ]
 
 data_to_used = [item[1] for item in data]
-print(data_to_used)
+
+
+transaction_encoder = TransactionEncoder()
+transaction_encoder_data = transaction_encoder.fit(data_to_used).transform(data_to_used)
+dataframe = pd.DataFrame(transaction_encoder_data, columns=transaction_encoder.columns_)
+
+
+

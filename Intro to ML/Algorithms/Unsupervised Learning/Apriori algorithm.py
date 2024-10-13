@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 from mlxtend.frequent_patterns import apriori, association_rules
+from mlxtend.preprocessing import TransactionEncoder
 
 data = [
     ['1', ['Bread', 'Milk', 'Vegetables', 'Salad']],

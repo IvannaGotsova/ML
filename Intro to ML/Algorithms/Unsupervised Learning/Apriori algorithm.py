@@ -135,3 +135,5 @@ dataframe = pd.DataFrame(transaction_encoder_data, columns=transaction_encoder.c
 
 frequent_itemsets = apriori(dataframe, min_support=0.3, use_colnames=True)
 
+association_rules = association_rules(frequent_itemsets, metric="confidence", min_threshold=0.3)
+

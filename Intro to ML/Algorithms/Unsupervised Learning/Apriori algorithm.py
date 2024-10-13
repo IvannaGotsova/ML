@@ -23,6 +23,8 @@ data = [
     ['Я9', ['Bread', 'Milk', 'Salad', 'Vegetables']],
     ['20', ['Bread', 'Milk', 'Salad', 'Vegetables']]
 ]
+data_to_used = [column_to_use[1] for column_to_use in data]
 
-dataFrame = pd.DataFrame(data)
 
+
+print(data_to_used)

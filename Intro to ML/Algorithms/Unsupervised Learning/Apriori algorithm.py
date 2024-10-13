@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 from mlxtend.frequent_patterns import apriori, association_rules
 
 data = [
@@ -23,8 +24,4 @@ data = [
     ['Я9', ['Bread', 'Milk', 'Salad', 'Vegetables']],
     ['20', ['Bread', 'Milk', 'Salad', 'Vegetables']]
 ]
-data_to_used = [column_to_use[1] for column_to_use in data]
 
-
-
-print(data_to_used)

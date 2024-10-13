@@ -133,3 +133,5 @@ transaction_encoder_data = transaction_encoder.fit(data_to_used).transform(data_
 dataframe = pd.DataFrame(transaction_encoder_data, columns=transaction_encoder.columns_)
 
 
+frequent_itemsets = apriori(dataframe, min_support=0.3, use_colnames=True)
+

@@ -33,12 +33,6 @@ dataframeExample['Humidity'] = dataframeExample['Humidity'].map(resultConvertHum
 dataframeExample['Wind'] = dataframeExample['Wind'].map(resultConvertWind)
 dataframeExample['Predicted'] = dataframeExample['Predicted'].map(resultConvertPredicted)
 
-features = ['Outlook', 'Temperature', 'Humidity', 'Wind']
-
-x = dataframeExample[features]
-y = dataframeExample['Predicted']
-
-
 dataframeExample = pd.get_dummies(dataframeExample)
 
 

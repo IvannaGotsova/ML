@@ -45,7 +45,7 @@ X = dataframeExample[['Day', 'Outlook', 'Temperature', 'Humidity', 'Wind']]
 Y = dataframeExample["Predicted"]
 
 
-X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.3, random_state=0)
+X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.3, random_state=1)
 
 
 model = XGBClassifier()

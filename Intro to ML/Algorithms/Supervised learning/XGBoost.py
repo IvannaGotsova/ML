@@ -46,3 +46,9 @@ X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=test_size)
 
 model = XGBClassifier()
 model.fit(X_train, y_train)
+
+prediction = model.predict(X_test)
+predictions = [round(value) for value in prediction]
+
+accuracy = accuracy_score(y_test, predictions)
+print("Accuracy: %.2f%%" % (accuracy * 100.0))

@@ -53,3 +53,5 @@ X_train, X_test, y_train, y_test = train_test_split(training_data,testing_data,t
 lgb_model = lgb.LGBMRegressor()
 
 lgb_model.fit(X_train, y_train)
+
+lgb_predict = lgb_model.predict(X_test)

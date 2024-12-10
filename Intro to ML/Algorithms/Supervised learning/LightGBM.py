@@ -39,3 +39,8 @@ dataframeExample['Predicted'] = dataframeExample['Predicted'].map(resultConvertP
 
 dataframeExample = pd.get_dummies(dataframeExample)
 
+dataframeExample.info()
+
+
+training_data = dataframeExample[['Day', 'Outlook', 'Temperature', 'Humidity', 'Wind']]
+testing_data = dataframeExample["Predicted"]

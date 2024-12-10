@@ -63,7 +63,7 @@ dataframeExample = pd.get_dummies(dataframeExample)
 training_data = dataframeExample[['Day', 'Outlook', 'Temperature', 'Humidity', 'Wind']]
 testing_data = dataframeExample["Predicted"]
 
-X_train, X_test, y_train, y_test = train_test_split(training_data, testing_data, test_size = 0.25, random_state=0)
+X_train, X_test, y_train, y_test = train_test_split(training_data, testing_data, test_size = 0.25, random_state=67)
 
 lgb_model = lgb.LGBMRegressor()
 

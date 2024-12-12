@@ -71,7 +71,7 @@ sc = StandardScaler()
 X_train = sc.fit_transform(X_train)
 X_test = sc.transform(X_test)
 
-pca = PCA(n_components=1)
+pca = PCA(n_components=2)
 
 X_train = pca.fit_transform(X_train)
 X_test = pca.transform(X_test)
@@ -81,3 +81,4 @@ explained_variance = pca.explained_variance_ratio_
 classifier = LogisticRegression(random_state=1)
 classifier.fit(X_train, y_train)
 y_prediction = classifier.predict(X_test)
+

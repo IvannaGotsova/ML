@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
+from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.decomposition import PCA
@@ -76,3 +77,7 @@ X_train = pca.fit_transform(X_train)
 X_test = pca.transform(X_test)
 
 explained_variance = pca.explained_variance_ratio_
+
+classifier = LogisticRegression(random_state=1)
+classifier.fit(X_train, y_train)
+y_prediction = classifier.predict(X_test)

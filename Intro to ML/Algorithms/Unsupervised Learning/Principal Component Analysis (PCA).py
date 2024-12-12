@@ -71,7 +71,7 @@ sc = StandardScaler()
 X_train = sc.fit_transform(X_train)
 X_test = sc.transform(X_test)
 
-pca = PCA(n_components=6)
+pca = PCA(n_components=1)
 
 X_train = pca.fit_transform(X_train)
 X_test = pca.transform(X_test)

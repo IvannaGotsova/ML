@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 from sklearn.model_selection import train_test_split
-
+from sklearn.preprocessing import StandardScaler
 
 
 datasetExample = {
@@ -63,3 +63,8 @@ training_data = dataframeExample[['Day', 'Outlook', 'Temperature', 'Humidity', '
 testing_data = dataframeExample["Predicted"]
 
 X_train, X_test, y_train, y_test = train_test_split(training_data, testing_data, test_size=0.25, random_state=67)
+
+sc = StandardScaler()
+
+X_train = sc.fit_transform(X_train)
+X_test = sc.transform(X_test)

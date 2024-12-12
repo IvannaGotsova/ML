@@ -38,3 +38,23 @@ datasetExample = {
                   "No", "Yes", "No", "No", "Yes", "Yes", "Yes", "No", "Yes", "No"
                   ]
 }
+
+
+dataframeExample = pd.DataFrame(datasetExample)
+
+resultConvertOutlook = {'Sunny': 0, 'Overcast': 1, 'Rainy': 2}
+resultConvertTemperature = {'Hot': 0, 'Cold': 1, 'Mild': 2}
+resultConvertHumidity = {'High': 0, 'Normal': 1}
+resultConvertWind = {'Yes': 0, 'No': 1}
+resultConvertPredicted = {'Yes': 0, 'No': 1}
+
+dataframeExample['Outlook'] = dataframeExample['Outlook'].map(resultConvertOutlook)
+dataframeExample['Temperature'] = dataframeExample['Temperature'].map(resultConvertTemperature)
+dataframeExample['Humidity'] = dataframeExample['Humidity'].map(resultConvertHumidity)
+dataframeExample['Wind'] = dataframeExample['Wind'].map(resultConvertWind)
+dataframeExample['Predicted'] = dataframeExample['Predicted'].map(resultConvertPredicted)
+
+dataframeExample = pd.get_dummies(dataframeExample)
+
+training_data = dataframeExample[['Day', 'Outlook', 'Temperature', 'Humidity', 'Wind']]
+testing_data = dataframeExample["Predicted"]

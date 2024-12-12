@@ -1,6 +1,9 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
+from sklearn.model_selection import train_test_split
+
+
 
 datasetExample = {
     'Day': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29,
@@ -59,4 +62,4 @@ dataframeExample = pd.get_dummies(dataframeExample)
 training_data = dataframeExample[['Day', 'Outlook', 'Temperature', 'Humidity', 'Wind']]
 testing_data = dataframeExample["Predicted"]
 
-
+X_train, X_test, y_train, y_test = train_test_split(training_data, testing_data, test_size=0.25, random_state=67)

@@ -58,3 +58,5 @@ dataframeExample = pd.get_dummies(dataframeExample)
 
 training_data = dataframeExample[['Day', 'Outlook', 'Temperature', 'Humidity', 'Wind']]
 testing_data = dataframeExample["Predicted"]
+
+

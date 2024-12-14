@@ -15,3 +15,6 @@ print(scalar_number)
 
 scalar_number = 43
 print(scalar_number)
+
+print(53)
+print(35)
